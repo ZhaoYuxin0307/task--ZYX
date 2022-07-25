@@ -10,8 +10,8 @@ export default function filtersMenus(menus) {
 }
 
 /**
-   * 去除没用的children
-   */
+ * 去除没用的children
+ */
 const generateMenu = (menus) => {
   for (let i = 0; i < menus.length; i++) {
     if ((menus[i].child && menus[i].child.length <= 0) || !menus[i].icon) {

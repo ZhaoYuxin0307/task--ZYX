@@ -2,7 +2,6 @@
   <template v-if="props.item && !props.item.child">
     <el-menu-item :index="props.item.frontpath">
       <template #title>
-        <!-- <svg-icon :icon="props.item.icon"></svg-icon> -->
         <el-button
           :icon="props.item.icon"
           size="small"

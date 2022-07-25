@@ -2,9 +2,9 @@
   <div class="header">
     <div class="left">
       <div class="title">
-        <!-- <el-icon>
+        <el-icon>
           <ElemeFilled />
-        </el-icon> -->
+        </el-icon>
         <span>积云编程</span>
       </div>
       <!-- 开合导航栏 -->
@@ -92,7 +92,7 @@
 import { computed } from 'vue'
 import { useStore } from 'vuex'
 import { ElMessage, ElMessageBox } from 'element-plus'
-import * as logout from '../../api/login'
+import { logout } from '../../api/login'
 import { useRouter } from 'vue-router'
 
 const store = useStore()
@@ -104,7 +104,7 @@ const userInfo = computed(() => {
 
 function handleCommand(val) {
   if (val === 'upPwd') handleUpdatePassword()
-  if (val === 'loginout') handleLoginout()
+  if (val === 'loginOut') handleLoginOut()
 }
 
 // 修改密码
@@ -113,7 +113,7 @@ function handleUpdatePassword() {
 }
 
 // 退出登录
-function handleLoginout() {
+function handleLoginOut() {
   ElMessageBox.confirm('是否要退出登录？', '提示', {
     confirmButtonText: '确定',
     cancelButtonText: '取消',

@@ -1,6 +1,6 @@
 import request from '@/utils/request'
 
-// 登录接口
+// 登录
 function login(data) {
   return request({
     url: '/admin/login',
@@ -9,17 +9,13 @@ function login(data) {
   })
 }
 
-/**
- * 获取用户信息接口
- * @returns
- */
+// 获取用户信息
 function getUserInfo() {
-  return request({ url: '/admin/userInfo', method: 'get' })
+  return request({ url: '/admin/getinfo', method: 'post' })
 }
 
-// 退出登录接口
+// 退出登录
 function logout() {
   return request({ url: '/admin/logout', method: 'post' })
 }
-
 export { login, getUserInfo, logout }

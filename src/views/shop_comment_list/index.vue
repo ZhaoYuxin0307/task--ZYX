@@ -1,5 +1,5 @@
 <template>
-  <div class="">权限管理</div>
+  <div class="">评论管理</div>
 </template>
 
 <script setup></script>

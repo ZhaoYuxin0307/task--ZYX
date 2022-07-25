@@ -1,5 +1,5 @@
-import * as storage from '@/utils/storage'
-import router from '../../router'
+import storage from '@/utils/storage'
+import router from '@/router'
 export default {
   namespaced: true,
   state: {

@@ -1,18 +1,16 @@
-import * as login from '@/api/login'
-import * as getUserInfo from '@/api/login'
-import * as storage from '../../utils/storage'
-const TOKEN_KEY = 'token'
+import { login, getUserInfo } from '@/api/login'
+import storage from '../../utils/storage'
 export default {
   namespaced: true,
   state: {
-    token: storage.getItem(TOKEN_KEY) || '',
+    token: storage.getItem('token') || '',
     userInfo: '',
     isCollapse: false
   },
   mutations: {
     SET_TOKEN(state, params) {
       state.token = params
-      storage.setItem(TOKEN_KEY, params)
+      storage.setItem('token', params)
     },
     SET_USER_INFO(state, params) {
       state.userInfo = params
@@ -23,14 +21,16 @@ export default {
   },
   actions: {
     async handleLogin({ commit }, params) {
-      const response = await login(params)
-      commit('SET_TOKEN', response.token)
-      return response
+      const res = await login(params)
+      console.log(res)
+      commit('SET_TOKEN', res.token)
+      return res
     },
     async getUserInfo({ commit }) {
-      const response = await getUserInfo()
-      commit('SET_USER_INFO', response)
-      return response
+      const res = await getUserInfo()
+      // console.log(res)
+      commit('SET_USER_INFO', res)
+      return res
     }
   }
 }

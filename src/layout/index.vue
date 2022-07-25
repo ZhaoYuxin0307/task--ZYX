@@ -21,7 +21,7 @@
 import AppAside from './AppAside'
 import AppMain from './AppMain'
 import AppHeader from './AppHeader'
-import TagsView from '../components/TagView.vue'
+import TagsView from '../components/TagsView.vue'
 </script>
 
 <style lang="scss" scoped>
